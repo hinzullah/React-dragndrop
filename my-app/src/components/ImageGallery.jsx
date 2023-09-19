@@ -1,153 +1,75 @@
 import React from "react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import ImageItem from "./ImageItem";
 import SearchBar from "./SearchBar";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ImageGallery = () => {
-  // const [images, setImages] = useState([
-  //   // {
-  //   //   id: 1,
-  //   //   title: "Safari sample",
-  //   //   img: "images/camel desert.jpg",
-  //   //   tags: ["Nature, Lifestyle"],
-  //   //   type: "PNG",
-  //   // },
-  //   {
-  //     id: 2,
-  //     title: "Coffee Sample",
-  //     img: "images/coffee.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Coffee Sample",
-  //     img: "images/sneakers.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Coffee Sample",
-  //     img: "images/crib.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   {
-  //     id: 5,
-  //     title: "Coffee Sample",
-  //     img: "images/flower girl.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   {
-  //     id: 6,
-  //     title: "Coffee Sample",
-  //     img: "images/happy man.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   {
-  //     id: 7,
-  //     title: "Coffee Sample",
-  //     img: "images/meal.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   // {
-  //   //   id: 8,
-  //   //   title: "Coffee Sample",
-  //   //   img: "images/place.jpg",
-  //   //   tags: ["Food, Lifestyle"],
-  //   //   type: "JPG",
-  //   // },
-  //   {
-  //     id: 9,
-  //     title: "Coffee Sample",
-  //     img: "images/pool.jpg",
-  //     tags: ["Food, Lifestyle"],
-  //     type: "JPG",
-  //   },
-  //   // {
-  //   //   id: 10,
-  //   //   title: "Coffee Sample",
-  //   //   img: "images/view.jpg",
-  //   //   tags: ["Food, Lifestyle"],
-  //   //   type: "JPG",
-  //   // },
-  // ]);
-
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    // Simulate a delay (e.g., 2 seconds) to mimic network latency
+    // Simulating a delay (e.g., 2 seconds) to mimic network latency
     const delay = setTimeout(() => {
-      // Simulate fetching images from an API (replace with your actual data source)
+      // Simulating fetching images from an API (replace with your actual data source)
       const fetchedImages = [
         {
           id: 2,
           title: "Coffee Sample",
           img: "images/coffee.jpg",
-          tags: ["Food, Lifestyle, play"],
+          tags: ["Food, Lifestyle"],
           type: "JPG",
         },
         {
           id: 3,
-          title: "Coffee Sample",
+          title: "Out N About",
           img: "images/sneakers.jpg",
-          tags: ["Food, Lifestyle, one"],
+          tags: ["Lifestyle"],
           type: "JPG",
         },
         {
           id: 4,
           title: "Coffee Sample",
           img: "images/crib.jpg",
-          tags: ["Food, Lifestyle, out"],
+          tags: ["Lifestyle, Outdoor"],
           type: "JPG",
         },
         {
           id: 5,
-          title: "Coffee Sample",
+          title: "Perfect Skin",
           img: "images/flower girl.jpg",
-          tags: ["Food, Lifestyle"],
-          type: "JPG",
+          tags: ["Health, Lifestyle"],
+          type: "PNG",
         },
         {
           id: 6,
-          title: "Coffee Sample",
+          title: "John Doe",
           img: "images/happy man.jpg",
-          tags: ["Food, Lifestyle"],
+          tags: ["Food, Entertainment"],
           type: "JPG",
         },
         {
           id: 7,
-          title: "Coffee Sample",
+          title: "Delicacies",
           img: "images/meal.jpg",
-          tags: ["Food, Lifestyle"],
-          type: "JPG",
+          tags: ["Food, Diet, Lifestyle"],
+          type: "PNG",
         },
-        // {
-        //   id: 8,
-        //   title: "Coffee Sample",
-        //   img: "images/place.jpg",
-        //   tags: ["Food, Lifestyle"],
-        //   type: "JPG",
-        // },
+
         {
           id: 9,
-          title: "Coffee Sample",
+          title: "Slippery Outdoor",
           img: "images/pool.jpg",
-          tags: ["Food, Lifestyle"],
+          tags: ["Outdoor, Lifestyle, Entertainment"],
           type: "JPG",
         },
       ];
 
       setImages(fetchedImages);
       setLoading(false); // Set loading to false when data is ready
-    }, 2000); // Simulated delay of 2 seconds
+    }, 3000); // Simulated delay of 2 seconds
 
     return () => clearTimeout(delay); // Clear the timeout on component unmount
   }, []);
@@ -206,8 +128,9 @@ const ImageGallery = () => {
         />
       </div>
       {loading ? (
-        // Display a loading spinner or skeleton loader while images are loading
-        <div className="loading-spinner">Loading...</div> // Replace with your loading spinner component
+        <div className="loading-spinner">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-10 p-10">
           <AnimatePresence>
