@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 
-const ImageItem = ({ image, id }) => {
+const ImageItem = ({ image }) => {
   const [isToggled, setIsToggled] = useState(true);
 
   const handleToggle = () => {
@@ -10,7 +10,7 @@ const ImageItem = ({ image, id }) => {
   };
   return (
     <div className="">
-      <div className=" w-5/6 relative" key={id}>
+      <div className=" w-full relative" key={image.id}>
         <img src={image.img} alt="test" className=" rounded-xl" />
         {/* <!-- Overlay --> */}
         <div className="rounded-xl absolute inset-0 bg-black opacity-20 hover:opacity-10"></div>
