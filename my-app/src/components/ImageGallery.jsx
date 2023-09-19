@@ -81,7 +81,7 @@ const ImageGallery = () => {
   };
 
   const handleTouchStart = (e, image) => {
-    setDraggedImage(image);
+    handleDragStart(e, image);
   };
 
   const handleDragOver = (e) => {
