@@ -11,7 +11,7 @@ const ImageItem = ({ image }) => {
   return (
     <div className="">
       <div className=" w-full relative" key={image.id}>
-        <img src={image.img} alt="test" className=" rounded-xl" />
+        <img src={image.img} alt={image.title} className=" rounded-xl" />
         {/* <!-- Overlay --> */}
         <div className="rounded-xl absolute inset-0 bg-black opacity-20 hover:opacity-10"></div>
 

@@ -80,6 +80,10 @@ const ImageGallery = () => {
     setDraggedImage(image);
   };
 
+  const handleTouchStart = (e, image) => {
+    setDraggedImage(image);
+  };
+
   const handleDragOver = (e) => {
     e.preventDefault();
   };
@@ -140,6 +144,7 @@ const ImageGallery = () => {
                 className="image-card"
                 draggable="true"
                 onDragStart={(e) => handleDragStart(e, image)}
+                onTouchStart={(e) => handleTouchStart(e, image)}
                 onDragOver={(e) => handleDragOver(e)}
                 onDrop={(e) => handleDrop(e, image)}
                 initial={{ opacity: 0, y: -20 }}
