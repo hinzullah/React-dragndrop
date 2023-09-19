@@ -77,6 +77,7 @@ const ImageGallery = () => {
   const [draggedImage, setDraggedImage] = useState(null);
 
   const handleDragStart = (e, image) => {
+    e.preventDefault();
     setDraggedImage(image);
   };
 
