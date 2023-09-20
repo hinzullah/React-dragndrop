@@ -81,7 +81,10 @@ const ImageGallery = () => {
   };
 
   const handleTouchStart = (e, image) => {
-    handleDragStart(e, image);
+    // For touch devices, prevent the default behavior to avoid conflicts with drag-and-drop
+    e.preventDefault();
+
+    setDraggedImage(image);
   };
 
   const handleDragOver = (e) => {
