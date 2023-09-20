@@ -74,50 +74,6 @@ const ImageGallery = () => {
     return () => clearTimeout(delay); // Clear the timeout on component unmount
   }, []);
 
-  // const [draggedImage, setDraggedImage] = useState(null);
-
-  // const handleDragStart = (e, image) => {
-  //   setDraggedImage(image);
-  // };
-
-  // const handleTouchStart = (e, image) => {
-  //   // For touch devices, prevent the default behavior to avoid conflicts with drag-and-drop
-  //   e.preventDefault();
-
-  //   setDraggedImage(image);
-  // };
-
-  // const handleDragOver = (e) => {
-  //   e.preventDefault();
-  // };
-
-  // const handleDrop = (e, targetImage) => {
-  //   e.preventDefault();
-
-  //   // Fining the index of the dragged image and the target image
-  //   const draggedIndex = images.findIndex(
-  //     (image) => image.id === draggedImage.id
-  //   );
-  //   const targetIndex = images.findIndex(
-  //     (image) => image.id === targetImage.id
-  //   );
-
-  //   // Creating a copy of the images array
-  //   const updatedImages = [...images];
-
-  //   // Removing the dragged image from its original position
-  //   updatedImages.splice(draggedIndex, 1);
-
-  //   // Inserting the dragged image at the target position
-  //   updatedImages.splice(targetIndex, 0, draggedImage);
-
-  //   // Updating the state with the new order of images
-  //   setImages(updatedImages);
-
-  //   // Clearing the draggedImage state
-  //   setDraggedImage(null);
-  // };
-
   // Filter images based on the search tags
   const filteredImages = images.filter((image) =>
     image.tags.some((tag) =>
@@ -135,7 +91,7 @@ const ImageGallery = () => {
     // Set a timeout to initiate the drag after 3 seconds
     const timeoutId = setTimeout(() => {
       setDraggedImage(image);
-    }, 3000);
+    }, 1000);
 
     // Store the timeout ID in the state
     setTouchTimeout(timeoutId);
