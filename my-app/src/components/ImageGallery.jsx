@@ -124,10 +124,10 @@ const ImageGallery = () => {
   const handleDrop = (e, targetImage) => {
     e.preventDefault();
 
-    // Get the ID of the dragged image from the dataTransfer
+    // Getting the ID of the dragged image from the dataTransfer
     const draggedImageId = e.dataTransfer.getData("text/plain");
 
-    // Find the dragged image object
+    // Finding the dragged image object
     const draggedImage = images.find(
       (image) => image.id.toString() === draggedImageId
     );
@@ -144,19 +144,19 @@ const ImageGallery = () => {
       (image) => image.id === targetImage.id
     );
 
-    // Create a copy of the images array
+    // Creating a copy of the images array
     const updatedImages = [...images];
 
-    // Remove the dragged image from its original position
+    // Removing the dragged image from its original position
     updatedImages.splice(draggedIndex, 1);
 
-    // Insert the dragged image at the target position
+    // Inserting the dragged image at the target position
     updatedImages.splice(targetIndex, 0, draggedImage);
 
-    // Update the state with the new order of images
+    // Updateing the state with the new order of images
     setImages(updatedImages);
 
-    // Clear the draggedImage state
+    // Cleaing the draggedImage state
     setDraggedImage(null);
   };
 
