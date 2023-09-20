@@ -74,16 +74,90 @@ const ImageGallery = () => {
     return () => clearTimeout(delay); // Clear the timeout on component unmount
   }, []);
 
-  const [draggedImage, setDraggedImage] = useState(null);
+  // const [draggedImage, setDraggedImage] = useState(null);
 
-  const handleDragStart = (e, image) => {
-    setDraggedImage(image);
-  };
+  // const handleDragStart = (e, image) => {
+  //   setDraggedImage(image);
+  // };
+
+  // const handleTouchStart = (e, image) => {
+  //   // For touch devices, prevent the default behavior to avoid conflicts with drag-and-drop
+  //   e.preventDefault();
+
+  //   setDraggedImage(image);
+  // };
+
+  // const handleDragOver = (e) => {
+  //   e.preventDefault();
+  // };
+
+  // const handleDrop = (e, targetImage) => {
+  //   e.preventDefault();
+
+  //   // Fining the index of the dragged image and the target image
+  //   const draggedIndex = images.findIndex(
+  //     (image) => image.id === draggedImage.id
+  //   );
+  //   const targetIndex = images.findIndex(
+  //     (image) => image.id === targetImage.id
+  //   );
+
+  //   // Creating a copy of the images array
+  //   const updatedImages = [...images];
+
+  //   // Removing the dragged image from its original position
+  //   updatedImages.splice(draggedIndex, 1);
+
+  //   // Inserting the dragged image at the target position
+  //   updatedImages.splice(targetIndex, 0, draggedImage);
+
+  //   // Updating the state with the new order of images
+  //   setImages(updatedImages);
+
+  //   // Clearing the draggedImage state
+  //   setDraggedImage(null);
+  // };
+
+  // Filter images based on the search tags
+  const filteredImages = images.filter((image) =>
+    image.tags.some((tag) =>
+      tag.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  const [draggedImage, setDraggedImage] = useState(null);
+  const [touchTimeout, setTouchTimeout] = useState(null);
 
   const handleTouchStart = (e, image) => {
-    // For touch devices, prevent the default behavior to avoid conflicts with drag-and-drop
+    // Prevent the default touchstart behavior
     e.preventDefault();
 
+    // Set a timeout to initiate the drag after 3 seconds
+    const timeoutId = setTimeout(() => {
+      setDraggedImage(image);
+    }, 3000);
+
+    // Store the timeout ID in the state
+    setTouchTimeout(timeoutId);
+  };
+
+  const handleTouchEnd = () => {
+    // Clear the touch timeout if it exists
+    if (touchTimeout) {
+      clearTimeout(touchTimeout);
+      setTouchTimeout(null);
+    }
+  };
+
+  const handleDragStart = (e, image) => {
+    // Cancel the touch timeout if it exists
+    if (touchTimeout) {
+      clearTimeout(touchTimeout);
+      setTouchTimeout(null);
+    }
+
+    // Set the data being dragged (used to identify the dragged image)
+    e.dataTransfer.setData("text/plain", image.id.toString());
     setDraggedImage(image);
   };
 
@@ -94,7 +168,19 @@ const ImageGallery = () => {
   const handleDrop = (e, targetImage) => {
     e.preventDefault();
 
-    // Fining the index of the dragged image and the target image
+    // Get the ID of the dragged image from the dataTransfer
+    const draggedImageId = e.dataTransfer.getData("text/plain");
+
+    // Find the dragged image object
+    const draggedImage = images.find(
+      (image) => image.id.toString() === draggedImageId
+    );
+
+    if (!draggedImage) {
+      return;
+    }
+
+    // Find the index of the dragged image and the target image
     const draggedIndex = images.findIndex(
       (image) => image.id === draggedImage.id
     );
@@ -102,28 +188,21 @@ const ImageGallery = () => {
       (image) => image.id === targetImage.id
     );
 
-    // Creating a copy of the images array
+    // Create a copy of the images array
     const updatedImages = [...images];
 
-    // Removing the dragged image from its original position
+    // Remove the dragged image from its original position
     updatedImages.splice(draggedIndex, 1);
 
-    // Inserting the dragged image at the target position
+    // Insert the dragged image at the target position
     updatedImages.splice(targetIndex, 0, draggedImage);
 
-    // Updating the state with the new order of images
+    // Update the state with the new order of images
     setImages(updatedImages);
 
-    // Clearing the draggedImage state
+    // Clear the draggedImage state
     setDraggedImage(null);
   };
-
-  // Filter images based on the search tags
-  const filteredImages = images.filter((image) =>
-    image.tags.some((tag) =>
-      tag.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
 
   return (
     <div>
@@ -148,6 +227,7 @@ const ImageGallery = () => {
                 draggable="true"
                 onDragStart={(e) => handleDragStart(e, image)}
                 onTouchStart={(e) => handleTouchStart(e, image)}
+                onTouchEnd={() => handleTouchEnd()}
                 onDragOver={(e) => handleDragOver(e)}
                 onDrop={(e) => handleDrop(e, image)}
                 initial={{ opacity: 0, y: -20 }}
