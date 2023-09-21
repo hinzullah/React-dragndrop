@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { FaBattleNet } from "react-icons/fa";
 
 const NavBar = ({ handleSignOut }) => {
   const [isToggled, setIsToggled] = useState(false);
@@ -9,16 +8,21 @@ const NavBar = ({ handleSignOut }) => {
     setIsToggled(!isToggled); // Toggle the like state
   };
   return (
-    <div className="flex items-center justify-between shadow-lg py-5 md:py-3 px-5  ">
-      <div className=" flex gap-3">
-        <FaBattleNet size={32} />
-        <p className="font-semibold">Image Gallery</p>
+    <div className="flex items-center justify-between bg-gray-600 shadow-lg py-5 md:py-3 px-5  ">
+      <div className=" flex flex-col gap-3">
+        <p className="font-semibold text-white">Image Gallery</p>
+        <h3 className="text-white">Drag and drop photos to rearrange</h3>
       </div>
       <div
         onClick={handleToggle}
-        className=" bg-blue-500 rounded-full shadow-sm cursor-pointer"
+        className=" bg-blue-400 rounded-full shadow-sm cursor-pointer"
       >
-        <img src="/5907.jpg" alt="user" className="w-12 rounded-full" />
+        <button
+          onClick={() => handleSignOut()}
+          className="hover:bg-blue-400 bg-blue-600 py-1 px-2 text-white font-semibold rounded-md"
+        >
+          Log Out
+        </button>
       </div>
 
       <div
@@ -27,16 +31,7 @@ const NavBar = ({ handleSignOut }) => {
             ? "absolute right-5 top-20 bg-white shadow-lg h-1/6 w-40 rounded-md z-40"
             : "hidden"
         }
-      >
-        <div className="flex items-center justify-center pt-10">
-          <button
-            onClick={() => handleSignOut()}
-            className="hover:bg-blue-800 bg-blue-700 py-2 px-4 text-white font-semibold rounded-md"
-          >
-            LogOut
-          </button>
-        </div>
-      </div>
+      ></div>
     </div>
   );
 };

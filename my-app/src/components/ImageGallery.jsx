@@ -17,51 +17,116 @@ const ImageGallery = () => {
       const fetchedImages = [
         {
           id: 2,
-          title: "Coffee Sample",
-          img: "images/coffee.jpg",
+          title: "Top View of a Boat on Blue Water",
+          img: "https://images.pexels.com/photos/18074909/pexels-photo-18074909/free-photo-of-top-view-of-a-boat-on-blue-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
           tags: ["Food, Lifestyle"],
           type: "JPG",
         },
+
+        /**  {
+          
+        },
+        {
+          src: "https://images.pexels.com/photos/18365722/pexels-photo-18365722/free-photo-of-tuktuk.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+         
+          tag: "Torch of beautiful Area"
+        },
+        {
+          src: "https://images.pexels.com/photos/17118489/pexels-photo-17118489/free-photo-of-food-sea-beach-sand.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        
+          tag: "Aesthetic pictures"
+        },
+        {
+          src: "https://images.pexels.com/photos/18271867/pexels-photo-18271867/free-photo-of-ferris-wheel.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      
+          tag: "Ferris Wheel"
+        },*/
+
         {
           id: 3,
-          title: "Out N About",
-          img: "images/sneakers.jpg",
+          title: "Cruise Ship in Water",
+          img: "https://images.pexels.com/photos/11427647/pexels-photo-11427647.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
           tags: ["Lifestyle"],
           type: "JPG",
         },
         {
           id: 4,
-          title: "Coffee Sample",
-          img: "images/crib.jpg",
+          title: "Seagulls Flying over the Ocean",
+          img: "https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
           tags: ["Lifestyle, Outdoor"],
           type: "JPG",
         },
+
         {
           id: 5,
-          title: "Perfect Skin",
-          img: "images/flower girl.jpg",
+          title: "Aesthetic Image",
+          img: "https://images.pexels.com/photos/18403881/pexels-photo-18403881.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
           tags: ["Health, Lifestyle"],
           type: "PNG",
         },
+
         {
           id: 6,
-          title: "John Doe",
-          img: "images/happy man.jpg",
+          title: "Panamá Pavo real",
+          img: "https://images.pexels.com/photos/18352660/pexels-photo-18352660/free-photo-of-pavo-real.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
           tags: ["Food, Entertainment"],
           type: "JPG",
         },
+
         {
-          id: 7,
-          title: "Delicacies",
-          img: "images/meal.jpg",
+          id: 8,
+          title: "Woman Leaning on Washing Machine",
+          img: "https://images.pexels.com/photos/15625100/pexels-photo-15625100/free-photo-of-woman-leaning-on-washing-machine.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
           tags: ["Food, Diet, Lifestyle"],
           type: "PNG",
         },
 
         {
           id: 9,
-          title: "Slippery Outdoor",
-          img: "images/pool.jpg",
+          title: "Desert Meal",
+          img: "https://images.pexels.com/photos/18286678/pexels-photo-18286678/free-photo-of-desert.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          tags: ["Outdoor, Lifestyle, Entertainment"],
+          type: "JPG",
+        },
+
+        {
+          id: 10,
+          title: "Roofs of building in city",
+          img: "https://images.pexels.com/photos/18252341/pexels-photo-18252341/free-photo-of-roofs-of-buildings-in-city.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          tags: ["Outdoor, Lifestyle, Entertainment"],
+          type: "JPG",
+        },
+
+        {
+          id: 11,
+          title: "Deer fawn on dirt road",
+          img: "https://images.pexels.com/photos/15723624/pexels-photo-15723624/free-photo-of-deer-fawn-on-dirt-road.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          tags: ["Outdoor, Lifestyle, Entertainment"],
+          type: "JPG",
+        },
+
+        {
+          id: 12,
+          title: "Blue Suv on Brown Sand",
+          img: "https://images.pexels.com/photos/10725137/pexels-photo-10725137.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          tags: ["Outdoor, Lifestyle, Entertainment"],
+          type: "JPG",
+        },
+
+        {
+          id: 13,
+          title:
+            "Striped Cushions on a Sofa and White Flip-Flops on a Wooden Jetty",
+          img: "https://images.pexels.com/photos/17467001/pexels-photo-17467001/free-photo-of-striped-cushions-on-a-sofa-and-white-flip-flops-on-a-wooden-jetty.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+          tags: ["Outdoor, Lifestyle, Entertainment"],
+          type: "JPG",
+        },
+
+        {
+          id: 14,
+          title: "From train window view of railroad and buildings in city",
+          img: "https://images.pexels.com/photos/7620384/pexels-photo-7620384.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+
           tags: ["Outdoor, Lifestyle, Entertainment"],
           type: "JPG",
         },

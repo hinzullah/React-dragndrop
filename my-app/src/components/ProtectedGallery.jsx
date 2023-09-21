@@ -9,7 +9,7 @@ const ProtectedGallery = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        // User is authenticated, set the user
+        // User is authenticated,set the user
         setUser(authUser);
       } else {
         // User is not authenticated, handle redirection or display a login message

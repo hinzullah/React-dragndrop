@@ -6,7 +6,6 @@ import { UserContext } from "../App";
 import NavBar from "../components/NavBar";
 import ImageGallery from "../components/ImageGallery";
 import ProtectedGallery from "../components/ProtectedGallery";
-import FooterCredit from "../components/FooterCredit";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -27,7 +26,6 @@ const Home = () => {
       <ProtectedGallery>
         <NavBar handleSignOut={handleSignOut} />
         <ImageGallery />
-        <FooterCredit />
       </ProtectedGallery>
     </div>
   );
