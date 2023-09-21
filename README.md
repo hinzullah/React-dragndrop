@@ -1,4 +1,4 @@
-# hngx task3
+# HNGX_FRONTENDTRACK_STAGETHREETASK
 
 # Drag-and-Drop Image Gallery with React
 
