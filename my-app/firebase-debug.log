@@ -1,0 +1,152 @@
+[debug] [2023-09-21T16:55:03.670Z] ----------------------------------------------------------------------
+[debug] [2023-09-21T16:55:03.673Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-09-21T16:55:03.674Z] CLI Version:   12.5.4
+[debug] [2023-09-21T16:55:03.674Z] Platform:      win32
+[debug] [2023-09-21T16:55:03.674Z] Node Version:  v16.14.0
+[debug] [2023-09-21T16:55:03.675Z] Time:          Thu Sep 21 2023 17:55:03 GMT+0100 (West Africa Standard Time)
+[debug] [2023-09-21T16:55:03.676Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-21T16:55:03.687Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-21T16:55:03.688Z] > authorizing via signed-in user (oduolakamol@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\HP\Desktop\Hngx\hngx-stage3\my-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-09-21T16:55:37.990Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-09-21T16:55:38.884Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-09-21T16:55:38.884Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project my-app-ae4c7 (my-app) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote public/404.html 
+[debug] [2023-09-21T16:58:40.070Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2023-09-21T16:58:40.530Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2023-09-21T16:58:40.531Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.4.0","browserURL":"https://www.gstatic.com/firebasejs/10.4.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.4.0/firebase.tgz"},"live":{"version":"10.4","browserURL":"https://www.gstatic.com/firebasejs/live/10.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.4.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.4.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.4.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.4.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.4.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.4.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\HP\Desktop\Hngx\hngx-stage3 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=903757055&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-09-21T16:59:31.471Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2023-09-21T16:59:31.471Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2023-09-21T16:59:32.493Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2023-09-21T16:59:32.493Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2023-09-21T16:59:32.504Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2023-09-21T16:59:33.288Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2023-09-21T16:59:33.288Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"hinzullah","id":53622814,"node_id":"MDQ6VXNlcjUzNjIyODE0","avatar_url":"https://avatars.githubusercontent.com/u/53622814?v=4","gravatar_id":"","url":"https://api.github.com/users/hinzullah","html_url":"https://github.com/hinzullah","followers_url":"https://api.github.com/users/hinzullah/followers","following_url":"https://api.github.com/users/hinzullah/following{/other_user}","gists_url":"https://api.github.com/users/hinzullah/gists{/gist_id}","starred_url":"https://api.github.com/users/hinzullah/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/hinzullah/subscriptions","organizations_url":"https://api.github.com/users/hinzullah/orgs","repos_url":"https://api.github.com/users/hinzullah/repos","events_url":"https://api.github.com/users/hinzullah/events{/privacy}","received_events_url":"https://api.github.com/users/hinzullah/received_events","type":"User","site_admin":false,"name":"oduola kamol alao","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"Frontend developer using HTML,CSS and Javascript","twitter_username":"alh_bn_murtadho","public_repos":55,"public_gists":0,"followers":26,"following":30,"created_at":"2019-08-02T17:41:37Z","updated_at":"2023-09-20T10:20:30Z","private_gists":0,"total_private_repos":4,"owned_private_repos":2,"disk_usage":521534,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as hinzullah 
+[info] 
+[debug] [2023-09-21T17:04:32.551Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:04:33.224Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:04:33.224Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:10:06.825Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:10:07.562Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:10:07.563Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:11:35.773Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:11:36.505Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:11:36.506Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:12:21.730Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:12:22.363Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:12:22.363Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:12:23.848Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:12:24.624Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:12:24.625Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:12:25.757Z] >>> [apiv2][query] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:12:26.553Z] <<< [apiv2][status] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:12:26.554Z] <<< [apiv2][body] GET https://api.github.com/repos/hinzullah/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:15:05.271Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:15:05.902Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2023-09-21T17:15:05.903Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:16:04.883Z] >>> [apiv2][query] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:16:05.588Z] <<< [apiv2][status] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:16:05.588Z] <<< [apiv2][body] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2023-09-21T17:16:12.073Z] >>> [apiv2][query] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key type=owner
+[debug] [2023-09-21T17:16:12.824Z] <<< [apiv2][status] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key 404
+[debug] [2023-09-21T17:16:12.824Z] <<< [apiv2][body] GET https://api.github.com/repos/user/https://github.com/hinzullah/React-dragndrop.git/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
