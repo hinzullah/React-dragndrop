@@ -1,6 +1,4 @@
-# HNGX_FRONTENDTRACK_STAGETHREETASK
-
-# Drag-and-Drop Image Gallery with React
+# Task Three React Drag and Drop
 
 This is a simple React-based image gallery application with drag-and-drop functionality, a search feature, and responsive design.
 
