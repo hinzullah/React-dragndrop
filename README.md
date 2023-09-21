@@ -1,4 +1,5 @@
-# HNGX_FRONTENDTRACK_STAGETHREETASK
+# hngx task3
+
 # Drag-and-Drop Image Gallery with React
 
 This is a simple React-based image gallery application with drag-and-drop functionality, a search feature, and responsive design.
@@ -28,21 +29,27 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/NonsoBarn/HNGX_FRONTENDTRACK_STAGETHREETASK
 
-2. **Navigate to the project directory:
+   ```
+
+2. \*\*Navigate to the project directory:
 
    ```bash
    cd MY-APP
-   
-3. **Start the development server:
+
+   ```
+
+3. \*\*Start the development server:
 
    ```bash
    npm start
-   
+
+   ```
+
 This will start the development server and open the app in your default web browser.
 
 ## Usage
-- **Authentication: Register or log in with your email and password to access additional features or manage your gallery.
-- **View the Image Gallery: Open the app in your web browser to view the image gallery.
-- **Drag and Drop: Click and drag images within the gallery to rearrange them.
-- **Search Images: Use the search field to filter images based on tags. The gallery will update in real-time as you type.
-   
+
+- \*\*Authentication: Register or log in with your email and password to access additional features or manage your gallery.
+- \*\*View the Image Gallery: Open the app in your web browser to view the image gallery.
+- \*\*Drag and Drop: Click and drag images within the gallery to rearrange them.
+- \*\*Search Images: Use the search field to filter images based on tags. The gallery will update in real-time as you type.
