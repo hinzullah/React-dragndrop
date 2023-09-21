@@ -14,7 +14,7 @@ const ProtectedGallery = ({ children }) => {
       } else {
         // User is not authenticated, handle redirection or display a login message
         setUser(null);
-        alert("Please Sign in to access the gallery :)");
+        // alert("Please Sign in to access the gallery :)");
       }
     });
 
