@@ -17,7 +17,7 @@ const SignupPage = () => {
     e.preventDefault();
     try {
       const user = await createUserWithEmailAndPassword(auth, email, password);
-      alert(`${user.user.email} account created`);
+      //   alert(`${user.user.email} account created`);
       navigate("/gallery");
     } catch (error) {
       if (error.message === "Firebase: Error (auth/email-already-in-use).") {

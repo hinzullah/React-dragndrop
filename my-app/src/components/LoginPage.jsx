@@ -17,7 +17,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
-      alert(`${user.user.email} signed in!`);
+      // alert(`${user.user.email} signed in!`);
       navigate("/gallery");
     } catch (error) {
       if (
